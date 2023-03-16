@@ -68,8 +68,13 @@ print(colors)
 a = {1, 2, 3, 5, 8}
 b = {2, 5, 8, 13, 21}
 c = a.copy()
-d = a.union(b)                                  # d = {1, 2, 3, 5, 8, 13, 21}
-e = a.intersection(b)                           # e = {8, 2, 5}
-f = a.difference(b)                             # f = {1, 3}
-g = b.difference(a)                             # g = {13, 21}
-h = a.union(b).difference(a.intersection(b))    # h = {1, 21, 3, 13}
+d = a.union(b)                                      # d = {1, 2, 3, 5, 8, 13, 21}
+e = a.intersection(b)                               # e = {8, 2, 5}
+f = a.difference(b)                                 # f = {1, 3}
+g = b.difference(a)                                 # g = {13, 21}
+h = a.union(b).difference(a.intersection(b))        # h = {1, 21, 3, 13}
+
+# Генератор списка
+list4 = [i for i in range(1, 101)]                  # list4 = [1, 2, 3 ... 99, 100]
+list5 = [i for i in range(1, 101) if i % 2 == 0]    # list5 = [2, 4 ... 98, 100]
+list6 = [i*2 for i in range(10) if i % 2 == 0]      # list6 = [0, 4, 8, 12, 16]
