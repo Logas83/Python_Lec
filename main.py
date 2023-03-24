@@ -1,3 +1,4 @@
+"""
 list1 = [1, 2, 3]
 print(list1)
 print(*list1)
@@ -78,3 +79,33 @@ h = a.union(b).difference(a.intersection(b))        # h = {1, 21, 3, 13}
 list4 = [i for i in range(1, 101)]                  # list4 = [1, 2, 3 ... 99, 100]
 list5 = [i for i in range(1, 101) if i % 2 == 0]    # list5 = [2, 4 ... 98, 100]
 list6 = [i*2 for i in range(10) if i % 2 == 0]      # list6 = [0, 4, 8, 12, 16]
+"""
+
+#from modul1 import max1
+
+#print(max1(5, 9))
+
+# def fib(n):
+#     if n in [1, 2]:
+#         return 1
+#     return fib(n - 1) + fib(n -2)
+
+# list1 = []
+
+# for i in range(1, 10):
+#     list1.append(fib(i))
+
+# print(list1)
+
+def quick_sort(array):
+    if len(array) <= 1:
+        return array
+    else:
+        pivot = array[0]
+    
+    less = [i for i in array[1:] if i <= pivot]
+    greater = [i for i in array[1:] if i > pivot]
+    
+    return quick_sort(less) + [pivot] + quick_sort(greater) 
+
+print(quick_sort([2, 45,6,7,99,5,3,54,65,67,6]))
