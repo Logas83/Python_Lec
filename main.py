@@ -96,7 +96,7 @@ list6 = [i*2 for i in range(10) if i % 2 == 0]      # list6 = [0, 4, 8, 12, 16]
 #     list1.append(fib(i))
 
 # print(list1)
-
+"""
 def quick_sort(array):
     if len(array) <= 1:
         return array
@@ -109,3 +109,33 @@ def quick_sort(array):
     return quick_sort(less) + [pivot] + quick_sort(greater) 
 
 print(quick_sort([2, 45,6,7,99,5,3,54,65,67,6]))
+"""
+"""
+def math(op, x, y):
+    print(op(x, y))
+
+
+math(lambda a, b: a + b, 5, 45)
+"""
+"""
+def select(f, col):
+    return [f(x) for x in col]
+
+
+def where(f, col):
+    return [x for x in col if f(x)]
+
+
+data = [1, 2, 3, 5, 8, 15, 23, 38]
+res = select(int, data)
+print(res)
+res = where(lambda x: x % 2 == 0, res)
+print(res)
+res = list(select(lambda x: (x, x ** 2), res))
+print(res)
+"""
+
+data = '12 4 58 3 79 11 111 5'
+
+data = list(map(int, data.split()))
+print(data)
